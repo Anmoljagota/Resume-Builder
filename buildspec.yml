@@ -1,0 +1,17 @@
+version: 0.2
+
+phases:
+    install:
+        runtime-versions:
+            nodejs: 18
+        commands:
+            - "npm i -g pnpm"
+            - "pnpm i"
+    build:
+        commands:
+            - "pnpm build"
+
+artifacts:
+    files:
+        - "**/*"
+    base-directory: out
